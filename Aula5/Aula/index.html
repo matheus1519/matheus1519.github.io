@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Aula 5 - Formulário</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<header>
+			<h1>
+				Formulario de Contato
+			</h1>
+		</header>
+		<main>
+			<form action="#enviado">
+
+				<fieldset>
+					<legend>Login</legend>
+					<label for="email">Email:</label>
+					<input type="email" name="email" id="email">
+					<label for="senha">Senha:</label>
+					<input type="password" name="senha" id="senha">
+				</fieldset>
+				<br>
+				<fieldset>
+					<legend>Vencimento da Fatura</legend>
+					<select size="6" multiple>
+						<optgroup label="Começo do mês">
+							<option value="5" >5</option>
+							<option value="10" selected>10</option>							
+						</optgroup>
+						<optgroup label="Final do mês">
+							<option value="20">20</option>
+							<option value="25">25</option>
+						</optgroup>
+					</select>
+				</fieldset>
+
+
+				<h2>
+					Pais
+				</h2>
+				<label for="paises-nome">Pais: </label>
+				<input type="text" name="paises-nome" id="paises-nome" list="paises" autofocus />
+				<datalist id="paises">
+					<option value="Brasil">
+					<option value="Estados Unidos">
+					<option value="China">
+				</datalist>
+
+				<h2>
+					Cidade
+				</h2>
+				<label for="cidade">Cidade: </label>
+				<input type="text" name="cidade" id="cidade"/>
+
+		
+
+				<h2>
+					Você deseja trabalhar como Webmaster?
+				</h2>
+				<label for="optsim">Sim</label>
+				<input type="radio" name="web-escolha" id="optsim"><br>
+				<label for="optnao">Não</label>
+				<input type="radio" name="web-escolha" id="optnao"><br>
+				<label for="opttalvez">Talvez</label>
+				<input type="radio" name="web-escolha" id="opttalvez"><br>
+				<label for="optqs">Quem Sabe</label>
+				<input type="radio" name="web-escolha" id="optqs"><br>
+
+				<h2>
+					Mensagem
+				</h2>
+				<textarea rows="7" cols="40" placeholder="Digite sua mensagem" maxlength="255">
+					
+				</textarea>				
+
+				<h2>
+					Imagens em anexo
+				</h2>
+				<input type="file" name="imagem" id="imagem">
+
+				<h2>
+					Tipos de input do HTML5
+				</h2>
+				<label for="cor">Escolha uma cor: </label>
+				<input type="color" name="cor" id="cor">
+
+				<label for="telefone">Telefone: </label>
+				<input type="number" name="telefone" id="telefone">
+
+				<label for="data">Data: </label>
+				<input type="date" name="data" id="data">
+
+				<label for="tempo">Tempo: </label>
+				<input type="time" name="tempo" id="tempo">
+
+				<h2>
+					Teste dos atributos do tipo texto
+				</h2>
+				<input type="text" name="entrada" id="entrada" placeholder="Insira uma entrada" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+				<!-- testar o pattern -->
+
+				<h2>
+					Escolha uma das opções
+				</h2>
+				<input type="reset" name="resete" id="resete" value="Limpar" >
+				<input type="submit" name="envia" id="envia" value="Confirmar">
+
+			</form>
+		</main>
+	</body>
+</html>
