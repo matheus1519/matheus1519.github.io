@@ -1,0 +1,89 @@
+body
+{
+
+    font-family: "Comic Sans MS", Arial, sans-serif;
+    background-image: url(https://amoraospets.com/wp-content/uploads/2018/11/onde-comprar-brinquedos-para-gatos-mais-barato.png);
+    background-color: white;
+    max-width: 871px;
+    height: 1500px;
+    /* background-repeat: no-repeat; */
+}
+
+h1
+{
+    background-color: blue;
+    padding: 20px 0px;
+    
+    text-align: center;
+
+}
+nav
+{
+	background-color:#9b2dff;
+}
+nav li
+{
+	display: inline-block;
+	padding: 20px;
+
+}
+nav a
+{
+	text-decoration: none;
+	color: white;
+	background-color: 
+}
+h2
+{
+	background-color: lightblue;
+	margin-top: 10px;
+	margin-right: 20px;
+	clear: both;
+}
+h1,h2
+{
+	box-shadow:2px 2px 2px black;
+	color: white;
+}
+p
+{
+
+    background-color: rgba(255, 255, 255, 0.4);
+	width:75%;
+	display: block;
+	float: left;
+    text-indent: 50px;
+    letter-spacing: 0.3px;
+    text-transform: capitalize;
+    border-radius: 2px;
+}
+p:hover
+{
+	background-color: rgba(255, 255, 255, 1);
+	box-shadow:2px 2px 2px black;
+}
+p, h2
+{
+	padding: 10px;
+	margin-left: 20px;
+
+}
+img 
+{
+
+	float: right;
+}
+img#um
+{
+	width:15%;
+}
+
+img#dois
+{
+	width:20%;
+}
+
+img#tres
+{
+	width:15%;
+}
