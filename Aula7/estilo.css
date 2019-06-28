@@ -7,9 +7,8 @@ h1,footer p
 }
 nav
 {
-	position: absolute;
 	width: 15%;
-	 /*float: left;*/
+	float: left;
 }
 nav ul
 {
