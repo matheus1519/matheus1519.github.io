@@ -1,0 +1,63 @@
+body
+{
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: 1fr 6fr;
+	grid-template-areas: 
+		"header header"
+		"nav main" 
+		"footer footer"
+	;
+}
+header
+{
+	grid-area: header;
+}
+h1,footer p
+{
+	background-color: gray;
+	color:white;
+	padding: 5px;
+	margin: 0;
+}
+nav
+{
+	grid-area: nav;
+}
+nav ul
+{
+	padding:10px;
+	margin: 0px;
+
+
+}
+nav li {
+	list-style: none;
+	background-color: #e8e8e8;
+
+}
+
+nav li a
+{
+	display: block;
+	text-decoration: none;
+	color: black;
+	padding: 20px;
+	margin: 1px;
+
+}
+nav li a:hover
+{
+	background-color: white;
+}
+main
+{
+	grid-area: main;
+	padding: 20px;
+	border-left: 1px solid black;
+	
+}
+footer
+{
+	grid-area: footer;
+}
