@@ -386,6 +386,7 @@ footer#f-principal
 #f-principal p
 {
 	text-align: right;
+    margin-right: 20px;
 }
 #top 
 {
@@ -425,7 +426,7 @@ footer#f-principal
 #spotlight-main 
 {
 	position:relative;
-	margin-bottom: 20px;
+	margin-bottom: 0px;
 
 }
 #spotlight-main:hover figcaption
@@ -456,7 +457,10 @@ footer#f-principal
 	z-index: 1;
 	display: none;
 }
-
+#spotlight-small-2  
+{
+    height: 100%;
+}
 #spotlight-small-1 figcaption, #spotlight-small-2 figcaption
 {
 	display: block;
@@ -474,12 +478,14 @@ iframe
 	font-size: 16pt;
 	right:5px;
 	top: 20px;
+    
 	
 }
 #links-fotos a
 {
 	color:white;
 	text-shadow: 0px 0px 10px black;
+    background-color: rgba(0,0,0,.3);
 }
 #links-fotos a:hover
 {
@@ -489,4 +495,6 @@ iframe
 #fotos
 {
 	position: relative;
+    margin: 0;
+    padding: 0;
 }

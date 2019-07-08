@@ -9,6 +9,7 @@ figure
 	margin: 0 0 50px;
 	padding: 0;
 	position: relative;
+    -webkit-transition: all 1s ease-in
 }
 img
 {
@@ -30,7 +31,7 @@ figcaption
 h1
 {
 	margin:0;
-	font-size: 17pt;
+	font-size: 16pt;
 }
 p{
 	margin: 0;
@@ -39,6 +40,7 @@ p{
 figure:hover .preto
 {
 	display: block;
+    transition: 1s;
 }
 figure:hover figcaption
 {
