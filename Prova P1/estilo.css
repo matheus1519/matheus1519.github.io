@@ -7,7 +7,7 @@ body
 {
 	font-family: 'Roboto Condensed', sans-serif;
 	width: 80%;
-	min-width: 822px;
+	min-width: 885px;
 	background-color: white;
 	margin: 0 auto;
 	display: grid;
@@ -45,7 +45,7 @@ header#h-principal
 	grid-area: p-header;
 	display: grid;
 	grid-gap: 10px;
-	grid-template-columns: 1fr 2fr;
+	grid-template-columns: minmax(273px, 1fr) 2fr;
 	grid-template-areas: 
 		"logo aces"
 		"logo pesq"
@@ -69,38 +69,46 @@ figcaption
 }
 figure#logo img
 {
-	max-width: 273px;
+	min-width: 273px;
+	max-width: 100%;
 }
 #foto-ministro:hover figcaption
 {
 	display: block;
 
 }
-#foto-ministro img
+#foto-ministro
 {
 	position: relative;
-	border-radius: 3px;
+	
 	margin:10px 0;
-	max-width: 400px;
+	min-width: 200px;
+	max-width: 100%;
+}
+#foto-ministro img
+{
+	width: 100%;
+	border-radius: 3px;
 }
 #foto-ministro figcaption
 {
+	width: 80%;
 	position: absolute;
-	top:450px;
-	color: black;
+	top:190px;
 	padding: 10px;
 	font-size: 19px;
 	font-weight: bold;
 	background-color: rgba(255,255,255,.5);
-	transition: 1s;
+	transition: display 1s;
 }
 #a-primeiro img
 {
-	display: inline-block;
-	max-width: 200px;
+	
 	border-radius: 2px;
 	float:right;
 	margin: 15px 0 15px 5px;
+	max-width: 100%;
+	width: 40%;
 }
 #btn-find
 {
@@ -401,7 +409,7 @@ footer#f-principal
 }
 #a-direita img
 {
-	max-width:207px;
+	width:100%;
 }
 #a-direita h1
 {
@@ -433,23 +441,17 @@ footer#f-principal
 	position: absolute;
 	top:50px;
 	z-index: 2;
-
-
 }
 #spotlight-main p
 {
 	margin: 0;
 }
 
-#spotlight-main img 
-{
-	color: black;
-}
 #spot-main {
 	position:absolute;
 	background-color:rgba(0,0,0,.5);
-	width: 207px;
-	height: 135px;
+	width: 100%;
+	height: 98%;
 	top:0px;
 	z-index: 1;
 	display: none;
@@ -458,4 +460,33 @@ footer#f-principal
 #spotlight-small-1 figcaption, #spotlight-small-2 figcaption
 {
 	display: block;
+}
+iframe
+{
+	width: 100%;
+	height: 25%;
+	border: none;
+	margin: 10px 0px;
+}
+#links-fotos
+{
+	position: absolute;
+	font-size: 16pt;
+	right:5px;
+	top: 20px;
+	
+}
+#links-fotos a
+{
+	color:white;
+	text-shadow: 0px 0px 10px black;
+}
+#links-fotos a:hover
+{
+	background-color: black;
+	box-shadow: 0 0 5px black;
+}
+#fotos
+{
+	position: relative;
 }
