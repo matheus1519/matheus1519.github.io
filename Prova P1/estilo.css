@@ -6,8 +6,8 @@ html
 body
 {
 	font-family: 'Roboto Condensed', sans-serif;
-	width: 80%;
-	min-width: 885px;
+	width: 90%;
+	min-width: 945px;
 	background-color: white;
 	margin: 0 auto;
 	display: grid;
@@ -45,7 +45,7 @@ header#h-principal
 	grid-area: p-header;
 	display: grid;
 	grid-gap: 10px;
-	grid-template-columns: minmax(273px, 1fr) 2fr;
+	grid-template-columns: minmax(273px, 5fr) 7fr;
 	grid-template-areas: 
 		"logo aces"
 		"logo pesq"
@@ -71,6 +71,8 @@ figure#logo img
 {
 	min-width: 273px;
 	max-width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 #foto-ministro:hover figcaption
 {
@@ -114,6 +116,7 @@ figure#logo img
 {
 	transition-timing-function: ease-in-out;
 	transition: padding 1s;
+    
 }
 #btn-find:hover
 {
@@ -153,6 +156,10 @@ nav li
 nav#acessibilidade
 {
 	grid-area: aces;
+}
+nav#acessibilidade li
+{
+	padding: 0;
 }
 .inline
 {
@@ -269,7 +276,7 @@ nav#acessibilidade
 }
 #n-lateral a
 {
-	font-size: 11.2pt;
+	font-size: 13pt;
 	padding: 5px;
 }
 #n-lateral a:hover:after
@@ -320,6 +327,15 @@ section#s-principal
  	margin: 10px 0;
  	box-shadow: 0px 0px 7px black;
 }
+#s-principal article:hover #leitura
+{
+    display:block;
+    z-index: 1;
+}
+#s-principal article:hover 
+{
+    z-index: 2;
+}
 aside#a-direita
 {
 	grid-area: d-aside;
@@ -328,7 +344,7 @@ footer#f-principal
 {
 	grid-area: p-footer;
 	display: grid;
-	grid-template-columns: 2.5fr 1fr 2.5fr;
+	grid-template-columns: 5.2fr 0.6fr 5.2fr;
 	grid-template-areas: 
 		"nav div p"
 	;
@@ -381,7 +397,8 @@ footer#f-principal
 #f-principal li
 {
 	text-align: justify;
-	display: block;
+	font-size: 12pt;
+    padding:0;
 }
 #f-principal p
 {
@@ -391,6 +408,8 @@ footer#f-principal
 #top 
 {
 	margin: 10px auto;
+    text-align: center;
+    
 }
 #f-lateral a:before
 {
@@ -471,6 +490,7 @@ iframe
 	height: 25%;
 	border: none;
 	margin: 10px 0px;
+    
 }
 #links-fotos
 {

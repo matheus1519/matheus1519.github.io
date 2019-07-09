@@ -3,13 +3,14 @@ body
 	margin: 0;
 	padding: 0;
 	font-family: 'Roboto Condensed', sans-serif;
+    overflow:hidden;
+    position: relative;
 }
 figure
 {
 	margin: 0 0 50px;
 	padding: 0;
 	position: relative;
-    -webkit-transition: all 1s ease-in
 }
 img
 {
@@ -37,12 +38,11 @@ p{
 	margin: 0;
 	font-size: 12pt;
 }
-figure:hover .preto
+.figura:hover .preto
 {
-	display: block;
-    transition: 1s;
+	display:block;
 }
-figure:hover figcaption
+.figura:hover figcaption
 {
 	display: block;
 
@@ -51,9 +51,11 @@ figure:hover figcaption
 {
 	background-color: rgba(0,0,0,.5);
 	width: 100%;
-	height: 98%;
-	z-index: 1;
-	top: 0px;
+	height: 100%;
+	z-index: 2;
+	top: 0;
+    left: 0;
 	position: absolute;
 	display: none;
 }
+
