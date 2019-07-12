@@ -419,7 +419,11 @@ footer#f-principal
 {
 	margin: 10px auto;
     text-align: center;
-    
+    transition: 1s;
+}
+#top:hover 
+{
+	margin-top: -15px;
 }
 #f-lateral a:before
 {
