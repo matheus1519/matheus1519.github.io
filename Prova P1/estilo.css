@@ -26,6 +26,7 @@ a
 {
 	padding:5px;
 	text-decoration: none;
+	color: blue;
 }
 section h1 
 {
@@ -184,14 +185,23 @@ nav#acessibilidade li
 	transition-timing-function: ease-in-out;
 	transition: background-color .5s;
 }
-.btn:hover
+.button {
+	padding: 10px 30px;
+	border-radius: 5px;
+	box-shadow: inset 0 1px 5px 1px #0057b1;
+	background: linear-gradient(lightblue 1%, #0057b1 99%);
+	color: white;
+	border:none;
+	font-size: 12pt;
+}
+.button:hover
 {
-	background-color: #c1c1c1;
-	
+	box-shadow: inset 0 0px 10px 2px #64d7ff;
+	cursor: pointer;
 }
 .borda
 {
-	border-radius:4px;
+	border-radius:3px;
 }
 .direita
 {
@@ -419,6 +429,19 @@ footer#f-principal
 {
 	background-color: #a6d6de;
 	margin-right: 20px;
+	transition: 1s;
+	transition-timing-function: ease-in-out;
+	border:1px solid #0055ad;
+}
+#f-lateral:hover
+{
+	box-shadow: 0 0 5px 1px black;
+	background-color: #c8ebff;
+}
+#f-lateral:hover h1
+{
+	color: black;
+	font-size: 25pt; 
 }
 #f-lateral h1
 {
@@ -426,6 +449,7 @@ footer#f-principal
 	padding:15px 15px 0;
 	margin:10px;
 	color: #8a8a8a;
+	transition: 1s;
 }
 #a-direita img
 {
@@ -487,9 +511,10 @@ footer#f-principal
 iframe
 {
 	width: 100%;
-	height: 25%;
+	height: 100%;
 	border: none;
 	margin: 10px 0px;
+	transition: 1s;
     
 }
 #links-fotos
