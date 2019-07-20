@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Aula 2</title>
+	</head>
+	<body>
+		<h1>
+			Clique no botão!
+		</h1>
+		<button onclick="palindromo()">
+			Clique Aqui
+		</button>
+		<script type="text/javascript">
+			function palindromo()
+			{
+				let resultado = true;
+				var entrada = prompt("Insira uma frase: ");
+				var array = entrada.split('');
+				let arrayInvertido = array.reverse();
+				array = arrayInvertido.join('');
+				for(var i = 0; i <  entrada.length; i++)
+				{
+					if(entrada[i] != array[i])
+					{
+						resultado = false;
+					}
+				}
+				resultado == true ? alert("A palavra é palindromo!") : alert("A palavra NÃO é palindromo!");
+			}
+		</script>
+	</body>
+</html>
