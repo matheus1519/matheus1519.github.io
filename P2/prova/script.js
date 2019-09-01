@@ -1,17 +1,18 @@
 $(document).ready(function(){
-	var dias = -1;
 	$('select#quartos').change(addQuartos);
-	$('#datachegada').on('change',calcularDias);
-	$('#datasaida').on('change',calcularDias);
-	$('#atualizar').on('click',calcularValor);
+	$('#datachegada').change(calcularValor);
+	$('#datasaida').on('change',calcularValor);
 	
 	function calcularDias() {
 		var a = new Date($('#datachegada').val());
 		var b = new Date($('#datasaida').val());
 		var c = b.getTime() - a.getTime();
 		dias = Math.ceil(c / (1000 * 3600 * 24));
+		return dias;
 	}
+	
 	function calcularValor() {
+		dias = calcularDias();
 		tamanho = $('select#quartos').val();
 		var valor = 0;
 		
@@ -37,7 +38,7 @@ $(document).ready(function(){
 			
 		}
 
-		if(valor == 0 || dias == -1) 
+		if(valor == 0 || dias < 0) 
 		{
 			$('#total').html('Valor total: Preencha tudo!'); 
 		}
@@ -64,11 +65,8 @@ $(document).ready(function(){
 		}
 
 		for (var i = 0; i < tamanho; i++) {
-			
-
-
 			$('#div-ad-cr').append(
-				'<h6 class="center col-sm-12">Quarto</h6>' +
+				`<h6 class="center col-sm-12">Quarto ${i+1}</h6>` +
 				'<div class="form-group col-sm-6" id="div-pessoas'+'-'+i+'"></div>' +
 				'<div class="form-group col-sm-6" id="div-criancas'+'-'+i+'"></div>'
 			);
@@ -77,12 +75,15 @@ $(document).ready(function(){
 				'<label for="pessoas" class="col-sm-6 col-form-label">Pessoas:</label>'+
 				'<select class="form-control" id="pessoas'+'-'+i+'"><option>Selecione as Pessoas</option><option>1</option><option>2</option><option>3</option></select>'
 			);
+			$('#pessoas-'+i).on('change',calcularValor);
 
 			$('#div-criancas'+'-'+i).append(
 				'<label for="criancas" class="col-sm-6 col-form-label">Criancas:</label>'+
 				'<select class="form-control" id="criancas'+'-'+i+'"><option>Selecione Crianças</option><option>1</option></select>'
 			);
+			$('#criancas'+'-'+i).on('change',calcularValor);
 		}
+		calcularValor();
 	}
 
 
