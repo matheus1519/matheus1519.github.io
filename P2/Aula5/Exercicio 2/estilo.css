@@ -1,0 +1,35 @@
+body {
+	text-align: center;
+}
+h1 {
+	background-color: gray;
+	padding: 10px 20px;
+	color: white;
+}
+li:before {
+	content: '► ';
+}
+li {
+	text-align: left;
+	list-style:none;
+	font-size: 14pt;
+}
+input {
+	padding:10px;
+	font-size: 13pt;
+	border:solid 1px gray;
+	margin-right: 10px;
+}
+button {
+	padding: 10px 20px;
+	border:solid 1px gray;
+	box-shadow: 0px 0px 15px 1px gray inset;
+}
+button:hover{
+	box-shadow: 0px 0px 15px 1px lightgray inset, 0px 0px 5px black;
+	cursor: pointer;
+}
+
+.border {
+	border-radius: 3px;
+}
